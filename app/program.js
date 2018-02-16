@@ -25,15 +25,10 @@ process.stdin.on('readable', function () {
                 case "/getOSinfo":
                     OSinfo.print();
                     break;
-                case "/time":
-                    process.stdin.on('readable', function () {
-                        var data = process.stdin.read();
-                        
-                        Time.cal(data);    
-                    });
-                    break;
+
                 
                 default: 
+                   
                     process.stderr.write("Wrong instruction!\n");
                     break;
 
